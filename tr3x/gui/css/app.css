@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../font/source-sans-pro.woff) format('woff');
+}
+
+html, body {
+	/*height: 100%;*/
+	background: url('../img/bg.png');
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+i {
+	font-size: 90%;
+	color: #ccc;
+}
+
+.app-panel {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 25%;
+	height: 100%;
+	padding: 10px;
+	padding-bottom: 110px;
+
+	background: rgba(36,36,36,0.9);
+	color: #fff;
+
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 100%;
+	font-weight: 300;
+
+	overflow-x: none;
+	overflow-y: auto;
+}
+
+.app-panel .app-heading {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 200%;
+	font-weight: 300;
+	
+	margin-bottom: 0px;
+	margin-top: 10px;
+	
+	cursor: pointer;
+}
+
+.app-report {
+	max-height: 100px;
+	overflow: scroll;
+}
+
+.app-report .indicator {
+	display: inline;
+	position: absolute;
+	
+	width: 12px;
+	height: 12px;
+	
+	border-radius: 6px;
+	background: green;
+	
+	margin-right: 5px;
+}
+
+.app-report .indicator.bad {
+	background: red;
+}
+
+.app-report .indicator + div {
+	margin-left: 20px;
+	font-size: 100%;
+	top: -4px;
+	position: relative;
+}
+
+.app-report p {
+	margin-left: 20px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	
+	font-size: 90%;
+	color: #ccc;
+	
+	cursor: pointer;
+}
+
+.app-stats {
+	font-size: 90%;
+	margin-left: 20px;
+
+}
+
+.app-search p {
+	padding: 4px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+
+	font-size: 80%;
+
+	color: #ccc;
+	background: rgba(204,204,204,0.2);
+
+	cursor: pointer;
+}
+
+.app-search p:hover, .app-search p:focus {
+	color: #ddd;
+	background: rgba(204,204,204,0.6);
+}
+
+.app-search div {
+	margin-top: 10px;
+}
+
+.app-search input {
+	background: none;
+	
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 5px;
+	
+	width: 100%;
+	padding: 5px;
+
+	color: #fff;
+}
+
+.app-preview {
+	position: relative;
+	display: inline-block;
+	
+	background: rgba(204,204,204,0.2);
+
+	border-radius: 5px;
+	border: 2px solid rgba(255,255,255,0.5);
+	
+	padding: 10px;
+	margin-bottom: 20px;
+
+	width: 90%;
+	/*min-height: 200px;*/
+}
+
+.app-sub {
+	font-size: 110%;
+	margin-top: 25px;
+	letter-spacing: 1.5;
+	border-bottom: 1px solid #ccc;
+}
+
+.app-sub span {
+	display: inline-block;
+	float: right;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.app-sub span:before {
+	content: '-';
+}
+
+.app-sub span.closed:before {
+	content: '+'
+}
+.app-data {
+	padding-left: 10px;
+}
+
+.app-control {
+	padding-left: 10px;
+}
+
+.app-control label {
+	margin-right: 12px;
+}
+
+table {
+	color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+	font-size: 90%;
+}
+
+table tr {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+table tr td {
+	width: 100%;
+	vertical-align: top;
+}
+
+table tr td:first-child {
+	width: 75px;
+	text-align: right;
+	color: #ddd;
+	margin-right: 10px;
+}
+
+table tr td p {
+	cursor: pointer;
+}
+
+table tr td ul {
+	list-style-type: circle;
+	padding-left: 20px;
+	margin-bottom: 0px;
+}
+
+table tr td li {
+	font-size: 100%;
+	cursor: pointer;
+}
+
+table tr td li i {
+	font-size: 100%;
+}
+
+table tr.muted {
+	opacity: 0.5;
+}
+
+table tr.muted:hover {
+	opacity: 1;
+}
+
+.app-tree {
+	z-index: 1;
+	position: absolute;
+	margin-left: 350px;
+}

@@ -1,0 +1,38 @@
+<div class="symPanel">
+	<embed class="symImage" src="content/panel/smart-cockpit-sections-try.svg" />
+</div>
+<script type="text/javascript">
+
+	selectPanel = function (_link){
+    	$('.tr3-answer').each(function() {
+    		_in = $(this).text();
+    		if (_in == _link){
+    			$(this).trigger(tr3.trigger);
+    		}
+    	});
+    }
+
+    window.selectPanel = selectPanel;  // make function public
+
+
+</script>
+<style type="text/css">
+.tr3-content {
+	position: absolute;
+	background: #444;
+	border: 5px solid #FBB820;
+	margin-top: 5%;
+}
+
+.symImage {
+	width: 97%;
+	height: 220px;
+	position: relative;
+}
+
+.symPanel {
+	position: relative;
+	min-height: 100%;
+}
+
+</style>

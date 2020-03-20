@@ -1,0 +1,76 @@
+<div class="symPanel">
+	<table class="symTable">
+		<tbody>
+			<tr>
+				<td data-link="ref-1"><i class="icon ion-wrench"></i></td>
+				<td data-link="ref-2"><i class="icon ion-hammer"></i></td>
+				<td data-link="ref-3"><i class="icon ion-key"></i></td>
+			</tr>
+			<tr>
+				<td data-link="ref-4"><i class="icon ion-flash-off"></i></td>
+				<td data-link="ref-5"><i class="icon ion-radio-waves"></i></td>
+				<td data-link="ref-6"><i class="icon ion-ios7-gear"></i></td>
+			</tr>
+			<tr>
+				<td data-link="ref-7"><i class="icon ion-wrench"></i></td>
+				<td data-link="ref-8"><i class="icon ion-hammer"></i></td>
+				<td data-link="ref-9"><strong>keines<br/>davon</strong></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	$('td').on("touchend", function() {
+    	_link = $(this).attr('data-link');
+    	
+    	$('.tr3-answer').each(function() {
+    		_in = $(this).text();
+    		if (_in == _link){
+    			$(this).trigger("touchend");
+    		}
+    	})
+    });
+</script>
+<style type="text/css">
+.tr3-content {
+	position: absolute;
+	min-height: 60%;
+	background: #444;
+	border: 5px solid #FBB820;
+	margin-top: 3%;
+}
+
+.tr3-choices {
+	opacity: 0;
+}
+
+.symPanel {
+	position: relative;
+	min-height: 100%;
+}
+
+.symTable {
+	top: 25px;
+	border: none;
+	width: 80%;
+	margin: auto;
+	position: absolute;
+	margin-left: 4%;
+}
+
+.symTable tr {
+	height: 55pt;
+}
+
+.symTable td {
+	font-size: 9pt;
+	vertical-align: middle;
+	text-align: center;
+	color: #eee;
+}
+
+.symTable td i {
+	font-size: 40pt;
+}
+
+</style>

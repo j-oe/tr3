@@ -1,0 +1,11 @@
+<tr3 content="content/warnblinkanlage.html" out="Warnblinkanlage einschalten!" title="Pannenhilfe" xmlns="http://www.hs-karlsruhe.de/kmm-m/tr3">
+	<branch content="content/warnweste.html" in="OK" out="Warnweste anziehen">
+		<branch in="OK" out="Warndreieck aufbauen und vor Körper halten">
+			<branch class="app" content="content/dist.html" in="OK" out="200m entgegen der Fahrtrichtung laufen">
+				<branch in="OK" out="Warndreieck aufstellen und zurück laufen">
+					<leaf in="OK" out="Pannenhilfe verständigen" content="content/phone.html" class="app" />
+				</branch>
+			</branch>
+		</branch>
+	</branch>
+</tr3>

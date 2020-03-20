@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tr3 content="content/warnblinkanlage.html" out="Warnblinkanlage einschalten!" title="smarthelp" xmlns="http://www.hs-karlsruhe.de/kmm-m/tr3">
+	<branch content="content/fahrtauglich.html" in="OK" out="Kann dein smart noch fahren?">
+		<branch content="content/warnweste.html" in="Nein" out="Warnweste anziehen">
+			<branch in="OK" out="Warndreieck aufbauen und vor Körper halten">
+				<branch class="app" content="content/dist.html" in="OK" out="200m entgegen der Fahrtrichtung laufen">
+					<branch in="OK" out="Warndreieck aufstellen und zurück laufen">
+						<branch in="OK" out="Wieso kannst du nicht mehr weiterfahren?">
+							<branch in="Reifenpanne" out="Kannst du den Reifen selbst reparieren?">
+								<branch in="Ja" out="Finde das Tirefix-Set in deinem smart">
+									<branch in="OK" out="Folge den Anweisungen auf der Verpackung">
+										<ref in="OK" copy="weiterfahrt"/>
+									</branch>
+								</branch>
+								<branch class="app" content="content/phone.html" id="pannendienst" in="Nein" out="Pannendienst verständigen">
+									<leaf in="OK" out="Warte bis der Pannendienst eintrifft"/>
+								</branch>
+							</branch>
+							<branch in="Leerer Tank" out="Bist du auf einer Autobahn?">
+								<branch in="Nein" out="Kannst du am Straßenrand laufen?">
+									<branch class="app" content="content/gasstation.html" in="Ja" out="Laufe zur nächsten Tankstelle:">
+										<branch in="OK" out="Fülle den Tank mit einem Reservekanister wieder auf">
+											<leaf class="good" id="weiterfahrt" in="OK" out="Gute Weiterfahrt!"/>
+										</branch>
+									</branch>
+									<ref in="Nein" copy="pannendienst"/>
+								</branch>
+								<ref in="Ja" copy="pannendienst"/>
+							</branch>
+							<branch in="Weiß nicht" out="Hattest du eine Kollision?">
+								<branch in="Nein" out="Zeigt das Display eine Meldung?">
+									<branch in="Nein" out="Gibt es Anzeichen auf einen Defekt (Geräusch, Qualm, etc)?">
+										<ref in="Nein" copy="pannendienst"/>
+										<ref in="Ja" copy="auffaelligkeiten"/>
+									</branch>
+									<ref in="Ja" copy="display"/>
+								</branch>
+								<branch in="Ja" out="Wurde dabei fremdes Eigentum beschädigt?">
+									<branch class="app" content="content/pic.html" in="Ja" out="Mache Fotos von den Beschädigungen">
+										<branch class="app" content="content/polizei.html" id="polizei" in="Fotos gemacht" out="Verständige die Polizei">
+											<leaf in="Polizei verständigt" out="Warte bis die Polizei eintrifft"/>
+										</branch>
+									</branch>
+									<branch in="Nein" out="Hattest du einen Wildunfall?">
+										<branch id="polizei-oder-adac" in="Nein" out="Wer soll verständigt werden?">
+											<ref in="Polizei" copy="polizei"/>
+											<ref in="Pannendienst" copy="pannendienst"/>
+										</branch>
+										<ref in="Ja" copy="polizei"/>
+									</branch>
+								</branch>
+							</branch>
+							<branch in="Batterie leer" out="Kannst du mit einem anderen Auto überbrücken?">
+								<branch in="Ja" out="Überbrücke die Batterie">
+									<ref in="OK" copy="weiterfahrt"/>
+								</branch>
+								<ref in="Nein" copy="pannendienst"/>
+							</branch>
+						</branch>
+					</branch>
+				</branch>
+			</branch>
+		</branch>
+		<branch in="Ja" out="Bewege dich aus dem Gefahrenbereich">
+			<branch in="OK" out="Zeigt das Display ungewöhnliche Meldungen?">
+				<branch id="auffaelligkeiten" in="Nein" out="Zeigt dein smart besondere Auffälligkeiten?">
+					<branch in="Geräusche" out="Kommen die Geräusche aus dem Innenraum?">
+						<branch id="standzeit" in="Nein" out="Stand das Auto zuvor für einen längeren Zeitraum?">
+							<branch in="Nein" out="Die Geräusche können auf einen Defekt hinweisen.">
+								<ref in="OK" copy="abstellen"/>
+							</branch>
+							<leaf class="good" in="Ja" out="Geräusche können nach langer Standzeit auftreten. Beobachten Sie das Problem"/>
+						</branch>
+						<branch in="Ja" out="Führen Sie ein Kind mit?">
+							<branch in="Nein" out="Verursachen lose Gegenstände die Geräusche?">
+								<branch in="Ja" out="Lose Gegenstände fixieren">
+									<ref in="OK" copy="weiterfahrt"/>
+								</branch>
+								<ref in="Nein" copy="standzeit"/>
+							</branch>
+							<branch class="bubu" id="bubu" in="Ja" out="Laut &quot;Bububuu&quot; sagen">
+								<branch in="Bububuu!" out="Besteht das Problem weiterhin?">
+									<ref in="Ja" copy="bubu"/>
+									<ref in="Nein" copy="weiterfahrt"/>
+								</branch>
+							</branch>
+						</branch>
+					</branch>
+					<branch in="Fahrverhalten" out="Wird die Fahrsicherheit beeinträchtigt?">
+						<ref in="Ja" copy="abstellen"/>
+						<ref in="Nein" copy="werkstatt"/>
+					</branch>
+					<ref in="Qualm/Rauch" copy="abstellen"/>
+				</branch>
+				<branch class="app switch" content="content/panel.html" id="display" in="Ja" out="Welches Display-Segment?">
+					<branch class="app switch" content="content/panel-links.html" in="Links" out="Welches Symbol?">
+						<branch class="bad" in="Gurt" out="Du hast den Sicherheitsgurt auf der Fahrerseite nicht angelegt">
+							<branch in="OK" out="">
+								<ref in="OK" copy="werkstatt"/>
+							</branch>
+						</branch>
+						<branch class="bad" in="Airbag" out="Die Rückhaltesysteme sind gestört.">
+							<branch class="app" content="content/geo.html" id="werkstatt" in="Werkstatt suchen" out="Werkstätten in deiner Nähe">
+								<ref in="OK" copy="weiterfahrt"/>
+							</branch>
+						</branch>
+						<branch id="keines" in="Keines" out="Ist das Symbol in einem anderem Segment?">
+							<ref in="Ja" copy="display"/>
+							<ref in="Nein" copy="auffaelligkeiten"/>
+						</branch>
+					</branch>
+					<branch class="app switch" content="content/panel-rechts.html" in="Rechts" out="Welches Symbol?">
+						<branch class="bad" in="ABS" out="ABS ist gestört. Nicht weiterfahren!">
+							<ref in="OK" copy="abstellen"/>
+						</branch>
+						<branch in="Feststellbremse" out="Ist Deine Feststellbremse (Handbremse) angezogen?">
+							<branch class="bad" in="Nein" out="Bremssytem ist gestört. Nicht weiterfahren!">
+								<branch id="abstellen" in="OK" out="Warnweste anziehen">
+									<branch in="OK" out="Warndreieck aufbauen und vor Körper halten">
+										<branch class="app" content="content/dist.html" in="OK" out="200m entgegen der Fahrtrichtung laufen">
+											<branch in="OK" out="Warndreieck aufstellen und zurück laufen">
+												<ref in="OK" copy="pannendienst"/>
+											</branch>
+										</branch>
+									</branch>
+								</branch>
+							</branch>
+							<branch in="Ja" out="Löse Die Feststellbremse">
+								<branch id="behoben" in="OK" out="Ist dein Problem damit behoben?">
+									<branch in="Nein" out="Weitersuchen?">
+										<ref in="Nein" copy="polizei-oder-adac"/>
+										<ref in="Ja" copy="auffaelligkeiten"/>
+									</branch>
+									<ref in="Ja" copy="weiterfahrt"/>
+								</branch>
+							</branch>
+						</branch>
+						<branch class="bad" in="ECO" out="Die Stopp-Start-Funktion ist gestört und wird ausgeschaltet">
+							<ref in="Werkstatt suchen" copy="werkstatt"/>
+						</branch>
+						<ref in="Keines" copy="keines"/>
+					</branch>
+					<branch class="app switch" content="content/panel-oben.html" in="Oben" out="Welches Symbol?">
+						<branch in="ESP" out="Leuchtet die Leuchte dauerhaft?">
+							<branch class="bad" in="Ja" out="esp® ist aufgrund einer Störung abgeschaltet">
+								<branch in="OK" out="Starten deinen smart neu. Ist das ESP-Symbol erloschen?">
+									<branch in="Nein" out="Vorsichtig weiterfahren!">
+										<ref in="Werkstatt suchen" copy="werkstatt"/>
+									</branch>
+									<ref in="Ja" copy="behoben"/>
+								</branch>
+							</branch>
+							<branch class="good" in="Nein" out="esp® greift ein, weil Schleudergefahr besteht">
+								<ref in="OK" copy="weiterfahrt"/>
+							</branch>
+						</branch>
+						<branch in="Blinker links" out="Blinkt die linke Blinkleuchte schneller als sonst?">
+							<branch class="bad" in="Ja" out="Deine linke Blinkleuchte ist defekt">
+								<ref in="OK" copy="xxx"/>
+							</branch>
+							<ref in="Nein" copy="auffaelligkeiten"/>
+						</branch>
+						<branch in="Blinker rechts" out="Blinkt die rechte Blinkleuchte schneller als sonst?">
+							<branch class="bad" in="Ja" out="Deine rechte Blinkleuchte ist defekt">
+								<ref in="" copy="behoben"/>
+							</branch>
+							<ref in="Nein" copy="auffaelligkeiten"/>
+						</branch>
+						<ref in="Keines" copy="keines"/>
+					</branch>
+					<branch class="app switch" content="content/panel-unten.html" in="Unten" out="Welches Symbol?">
+						<branch in="Batterie" out="Die Batterie wird nicht geladen. Nicht weiterfahren!">
+							<ref in="OK" copy="abstellen"/>
+						</branch>
+						<branch class="bad" in="Ölstand" out="Der Ölstand ist zu niedrig. Nicht weiterfahren!">
+							<ref in="OK" copy="abstellen"/>
+						</branch>
+						<branch class="critical" in="Motor" out="Es kann eine Störung vorliegen.">
+							<ref in="Werkstatt suchen" copy="werkstatt"/>
+						</branch>
+						<branch class="critical" in="Tankreserve" out="Du fährst mit Reserve-Kraftstoff">
+							<branch class="app" content="content/gasstation.html" id="tankstelle" in="Tankstelle suchen" out="Tankstellen in deiner Nähe">
+								<ref in="OK" copy="weiterfahrt"/>
+							</branch>
+						</branch>
+						<branch class="critical" in="Schaltsystem" out="Das Schaltsystem ist gestört">
+							<ref in="OK" copy="werkstatt"/>
+						</branch>
+						<branch in="Wegfahrsperre" out="Die Wegfahrsperre ist gestört">
+							<ref in="OK" copy="werkstatt"/>
+						</branch>
+						<branch class="bad" in="Kühlmittel" out="Das Kühlmittel ist zu heiß. Nicht weiterfahren!">
+							<ref in="OK" copy="pannendienst"/>
+						</branch>
+						<branch class="bad" in="Getriebe" out="Es liegt ein Getriebefehler vor">
+							<ref in="OK" copy="werkstatt"/>
+						</branch>
+						<ref in="Keines" copy="keines"/>
+					</branch>
+				</branch>
+			</branch>
+		</branch>
+	</branch>
+</tr3>

@@ -1,0 +1,144 @@
+/* 
+ mbsymbols.css
+ helper stylesheet to include Mercedes-Benz
+ symbols as font icons with aliases (mb-prefix)
+ Icons: 2014, Daimler AG
+ CSS: 2014, Jan Oevermann
+*/
+
+@font-face {
+  font-family: "MBsymb-A";
+  src: url("../../fonts/mbsym.a.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "MBsymb-B";
+  src: url("../../fonts/mbsym.b.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "MBsymb-C";
+  src: url("../../fonts/mbsym.c.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "MBsymb-D";
+  src: url("../../fonts/mbsym.d.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "MBsymb-E";
+  src: url("../../fonts/mbsym.e.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+.mb-icon {
+  display: inline-block;
+  speak: none;
+  /*font-size: 15vw;*/
+  /*font-size: 300%;*/
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+.mb-fuel, .mb-oil, .mb-battery, .mb-engine, .mb-cooling, .mb-warning, .mb-ice {
+  font-family: "MBsymb-A";
+}
+
+.mb-abs, .mb-airbag, .mb-seatbelt, .mb-warning-b, .mb-esp {
+  font-family: "MBsymb-B";
+}
+
+.mb-right, .mb-left {
+  font-family: "MBsymb-C";
+}
+
+.mb-brake, .mb-eco {
+  font-family: "MBsymb-D";
+}
+
+.mb-automatic {
+  font-family: "MBsymb-E";
+}
+
+.mb-fuel:before {
+  content: "\0036"; 
+}
+
+.mb-oil:before {
+  content: "\0034"; 
+}
+
+.mb-battery:before {
+  content: "\0023"; 
+}
+
+.mb-engine:before {
+  content: "\003B"; 
+}
+
+.mb-cooling:before {
+  content: "\003F"; 
+}
+
+.mb-warning:before {
+  content: "\006E"; 
+}
+
+.mb-abs:before {
+  content: "\0021"; 
+}
+
+.mb-airbag:before {
+  content: "\0036"; 
+}
+
+.mb-seatbelt:before {
+  content: "\0037"; 
+}
+
+.mb-warning-b:before {
+  content: "\00A3"; 
+}
+
+.mb-right:before {
+  content: "\0021"; 
+}
+
+.mb-left:before {
+  content: "\0023"; 
+}
+
+.mb-brake:before {
+  content: "\004A"; 
+}
+
+.mb-eco:before {
+  content: "\00A4"; 
+}
+
+.mb-ice:before {
+  content: "\00D2"; 
+}
+
+.mb-esp:before {
+  content: "\00F7"; 
+}
+
+.mb-automatic:before {
+  content: "\0035"; 
+}

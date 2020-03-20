@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:tr3="http://www.hs-karlsruhe.de/kmm-m/tr3">
+   <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e1">
+      <tr3:title>smarthelp</tr3:title>
+      <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/warnblinkanlage.html"/>
+      <tr3:out>Warnblinkanlage einschalten!</tr3:out>
+      <tr3:answers>
+         <rdf:alt>
+            <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e2"/>
+         </rdf:alt>
+      </tr3:answers>
+   </rdf:Description>
+   <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e2">
+      <tr3:in>OK</tr3:in>
+      <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e2"/>
+   </rdf:Description>
+   <rdf:RDF>
+      <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e2">
+         <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/fahrtauglich.html"/>
+         <tr3:out>Kann dein smart noch fahren?</tr3:out>
+         <tr3:answers>
+            <rdf:alt>
+               <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e3"/>
+               <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e40"/>
+            </rdf:alt>
+         </tr3:answers>
+      </rdf:Description>
+      <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e3">
+         <tr3:in>Nein</tr3:in>
+         <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e3"/>
+      </rdf:Description>
+      <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e40">
+         <tr3:in>Ja</tr3:in>
+         <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e40"/>
+      </rdf:Description>
+      <rdf:RDF>
+         <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e3">
+            <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/warnweste.html"/>
+            <tr3:out>Warnweste anziehen</tr3:out>
+            <tr3:answers>
+               <rdf:alt>
+                  <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e4"/>
+               </rdf:alt>
+            </tr3:answers>
+         </rdf:Description>
+         <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e4">
+            <tr3:in>OK</tr3:in>
+            <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e4"/>
+         </rdf:Description>
+         <rdf:RDF>
+            <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e4">
+               <tr3:out>Warndreieck aufbauen und vor Körper halten</tr3:out>
+               <tr3:answers>
+                  <rdf:alt>
+                     <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e5"/>
+                  </rdf:alt>
+               </tr3:answers>
+            </rdf:Description>
+            <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e5">
+               <tr3:in>OK</tr3:in>
+               <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e5"/>
+            </rdf:Description>
+            <rdf:RDF>
+               <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e5">
+                  <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/dist.html"/>
+                  <tr3:class>app</tr3:class>
+                  <tr3:out>200m entgegen der Fahrtrichtung laufen</tr3:out>
+                  <tr3:answers>
+                     <rdf:alt>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e6"/>
+                     </rdf:alt>
+                  </tr3:answers>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e6">
+                  <tr3:in>OK</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e6"/>
+               </rdf:Description>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e6">
+                     <tr3:out>Warndreieck aufstellen und zurück laufen</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e7"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e7">
+                     <tr3:in>OK</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e7"/>
+                  </rdf:Description>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e7">
+                        <tr3:out>Wieso kannst du nicht mehr weiterfahren?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Reifenpanne-d1e8"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Leerer Tank-d1e14"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Weiß nicht-d1e21"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Batterie leer-d1e36"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Reifenpanne-d1e8">
+                        <tr3:in>Reifenpanne</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e8"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Leerer Tank-d1e14">
+                        <tr3:in>Leerer Tank</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e14"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Weiß nicht-d1e21">
+                        <tr3:in>Weiß nicht</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e21"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Batterie leer-d1e36">
+                        <tr3:in>Batterie leer</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e36"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e8">
+                           <tr3:out>Kannst du den Reifen selbst reparieren?</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e9"/>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-pannendienst"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e9">
+                           <tr3:in>Ja</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e9"/>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-pannendienst">
+                           <tr3:in>Nein</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#pannendienst"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e9">
+                              <tr3:out>Finde das Tirefix-Set in deinem smart</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e10"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e10">
+                              <tr3:in>OK</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e10"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e10">
+                                 <tr3:out>Folge den Anweisungen auf der Verpackung</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt">
+                                 <tr3:in>OK</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#weiterfahrt"/>
+                              </rdf:Description>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#pannendienst">
+                              <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/phone.html"/>
+                              <tr3:class>app</tr3:class>
+                              <tr3:out>Pannendienst verständigen</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e13"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e13">
+                              <tr3:in>OK</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e13"/>
+                           </rdf:Description>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e13">
+                              <tr3:result>Warte bis der Pannendienst eintrifft</tr3:result>
+                           </rdf:Description>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e14">
+                           <tr3:out>Bist du auf einer Autobahn?</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e15"/>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-pannendienst"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e15">
+                           <tr3:in>Nein</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e15"/>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-pannendienst">
+                           <tr3:in>Ja</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#pannendienst"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e15">
+                              <tr3:out>Kannst du am Straßenrand laufen?</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e16"/>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-pannendienst"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e16">
+                              <tr3:in>Ja</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e16"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e16">
+                                 <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/gasstation.html"/>
+                                 <tr3:class>app</tr3:class>
+                                 <tr3:out>Laufe zur nächsten Tankstelle:</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e17"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e17">
+                                 <tr3:in>OK</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e17"/>
+                              </rdf:Description>
+                              <rdf:RDF>
+                                 <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e17">
+                                    <tr3:out>Fülle den Tank mit einem Reservekanister wieder auf</tr3:out>
+                                    <tr3:answers>
+                                       <rdf:alt>
+                                          <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                                       </rdf:alt>
+                                    </tr3:answers>
+                                 </rdf:Description>
+                                 <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt">
+                                    <tr3:in>OK</tr3:in>
+                                    <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#weiterfahrt"/>
+                                 </rdf:Description>
+                                 <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#weiterfahrt">
+                                    <tr3:class>good</tr3:class>
+                                    <tr3:result>Gute Weiterfahrt!</tr3:result>
+                                 </rdf:Description>
+                              </rdf:RDF>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e21">
+                           <tr3:out>Hattest du eine Kollision?</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e22"/>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e27"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e22">
+                           <tr3:in>Nein</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e22"/>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e27">
+                           <tr3:in>Ja</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e27"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e22">
+                              <tr3:out>Zeigt das Display eine Meldung?</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e23"/>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-display"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e23">
+                              <tr3:in>Nein</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e23"/>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-display">
+                              <tr3:in>Ja</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#display"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e23">
+                                 <tr3:out>Gibt es Anzeichen auf einen Defekt (Geräusch, Qualm, etc)?</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-pannendienst"/>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-auffaelligkeiten"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-auffaelligkeiten">
+                                 <tr3:in>Ja</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#auffaelligkeiten"/>
+                              </rdf:Description>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e27">
+                              <tr3:out>Wurde dabei fremdes Eigentum beschädigt?</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e28"/>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e31"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e28">
+                              <tr3:in>Ja</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e28"/>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e31">
+                              <tr3:in>Nein</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e31"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e28">
+                                 <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/pic.html"/>
+                                 <tr3:class>app</tr3:class>
+                                 <tr3:out>Mache Fotos von den Beschädigungen</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Fotos gemacht-polizei"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Fotos gemacht-polizei">
+                                 <tr3:in>Fotos gemacht</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#polizei"/>
+                              </rdf:Description>
+                              <rdf:RDF>
+                                 <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#polizei">
+                                    <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/polizei.html"/>
+                                    <tr3:class>app</tr3:class>
+                                    <tr3:out>Verständige die Polizei</tr3:out>
+                                    <tr3:answers>
+                                       <rdf:alt>
+                                          <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Polizei verständigt-d1e30"/>
+                                       </rdf:alt>
+                                    </tr3:answers>
+                                 </rdf:Description>
+                                 <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Polizei verständigt-d1e30">
+                                    <tr3:in>Polizei verständigt</tr3:in>
+                                    <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e30"/>
+                                 </rdf:Description>
+                                 <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e30">
+                                    <tr3:result>Warte bis die Polizei eintrifft</tr3:result>
+                                 </rdf:Description>
+                              </rdf:RDF>
+                           </rdf:RDF>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e31">
+                                 <tr3:out>Hattest du einen Wildunfall?</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-polizei-oder-adac"/>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-polizei"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-polizei-oder-adac">
+                                 <tr3:in>Nein</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#polizei-oder-adac"/>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-polizei">
+                                 <tr3:in>Ja</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#polizei"/>
+                              </rdf:Description>
+                              <rdf:RDF>
+                                 <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#polizei-oder-adac">
+                                    <tr3:out>Wer soll verständigt werden?</tr3:out>
+                                    <tr3:answers>
+                                       <rdf:alt>
+                                          <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Polizei-polizei"/>
+                                          <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Pannendienst-pannendienst"/>
+                                       </rdf:alt>
+                                    </tr3:answers>
+                                 </rdf:Description>
+                                 <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Polizei-polizei">
+                                    <tr3:in>Polizei</tr3:in>
+                                    <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#polizei"/>
+                                 </rdf:Description>
+                                 <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Pannendienst-pannendienst">
+                                    <tr3:in>Pannendienst</tr3:in>
+                                    <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#pannendienst"/>
+                                 </rdf:Description>
+                              </rdf:RDF>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e36">
+                           <tr3:out>Kannst du mit einem anderen Auto überbrücken?</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e37"/>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-pannendienst"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e37">
+                           <tr3:in>Ja</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e37"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e37">
+                              <tr3:out>Überbrücke die Batterie</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                  </rdf:RDF>
+               </rdf:RDF>
+            </rdf:RDF>
+         </rdf:RDF>
+      </rdf:RDF>
+      <rdf:RDF>
+         <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e40">
+            <tr3:out>Bewege dich aus dem Gefahrenbereich</tr3:out>
+            <tr3:answers>
+               <rdf:alt>
+                  <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e41"/>
+               </rdf:alt>
+            </tr3:answers>
+         </rdf:Description>
+         <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e41">
+            <tr3:in>OK</tr3:in>
+            <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e41"/>
+         </rdf:Description>
+         <rdf:RDF>
+            <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e41">
+               <tr3:out>Zeigt das Display ungewöhnliche Meldungen?</tr3:out>
+               <tr3:answers>
+                  <rdf:alt>
+                     <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-auffaelligkeiten"/>
+                     <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-display"/>
+                  </rdf:alt>
+               </tr3:answers>
+            </rdf:Description>
+            <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-auffaelligkeiten">
+               <tr3:in>Nein</tr3:in>
+               <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#auffaelligkeiten"/>
+            </rdf:Description>
+            <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-display">
+               <tr3:in>Ja</tr3:in>
+               <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#display"/>
+            </rdf:Description>
+            <rdf:RDF>
+               <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#auffaelligkeiten">
+                  <tr3:out>Zeigt dein smart besondere Auffälligkeiten?</tr3:out>
+                  <tr3:answers>
+                     <rdf:alt>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Geräusche-d1e43"/>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Fahrverhalten-d1e57"/>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Qualm/Rauch-abstellen"/>
+                     </rdf:alt>
+                  </tr3:answers>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Geräusche-d1e43">
+                  <tr3:in>Geräusche</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e43"/>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Fahrverhalten-d1e57">
+                  <tr3:in>Fahrverhalten</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e57"/>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Qualm/Rauch-abstellen">
+                  <tr3:in>Qualm/Rauch</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#abstellen"/>
+               </rdf:Description>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e43">
+                     <tr3:out>Kommen die Geräusche aus dem Innenraum?</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-standzeit"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e48"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-standzeit">
+                     <tr3:in>Nein</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#standzeit"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e48">
+                     <tr3:in>Ja</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e48"/>
+                  </rdf:Description>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#standzeit">
+                        <tr3:out>Stand das Auto zuvor für einen längeren Zeitraum?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e45"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e47"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e45">
+                        <tr3:in>Nein</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e45"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e47">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e47"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e45">
+                           <tr3:out>Die Geräusche können auf einen Defekt hinweisen.</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen">
+                           <tr3:in>OK</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#abstellen"/>
+                        </rdf:Description>
+                     </rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e47">
+                        <tr3:class>good</tr3:class>
+                        <tr3:result>Geräusche können nach langer Standzeit auftreten. Beobachten Sie das Problem</tr3:result>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e48">
+                        <tr3:out>Führen Sie ein Kind mit?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e49"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-bubu"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e49">
+                        <tr3:in>Nein</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e49"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-bubu">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#bubu"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e49">
+                           <tr3:out>Verursachen lose Gegenstände die Geräusche?</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e50"/>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-standzeit"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e50">
+                           <tr3:in>Ja</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e50"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e50">
+                              <tr3:out>Lose Gegenstände fixieren</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#bubu">
+                           <tr3:class>bubu</tr3:class>
+                           <tr3:out>Laut "Bububuu" sagen</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Bububuu!-d1e54"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Bububuu!-d1e54">
+                           <tr3:in>Bububuu!</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e54"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e54">
+                              <tr3:out>Besteht das Problem weiterhin?</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-bubu"/>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-weiterfahrt"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-bubu">
+                              <tr3:in>Ja</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#bubu"/>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-weiterfahrt">
+                              <tr3:in>Nein</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#weiterfahrt"/>
+                           </rdf:Description>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                  </rdf:RDF>
+               </rdf:RDF>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e57">
+                     <tr3:out>Wird die Fahrsicherheit beeinträchtigt?</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-abstellen"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-werkstatt"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-abstellen">
+                     <tr3:in>Ja</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#abstellen"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-werkstatt">
+                     <tr3:in>Nein</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#werkstatt"/>
+                  </rdf:Description>
+               </rdf:RDF>
+            </rdf:RDF>
+            <rdf:RDF>
+               <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#display">
+                  <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/panel.html"/>
+                  <tr3:class>app switch</tr3:class>
+                  <tr3:out>Welches Display-Segment?</tr3:out>
+                  <tr3:answers>
+                     <rdf:alt>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Links-d1e62"/>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Rechts-d1e72"/>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Oben-d1e91"/>
+                        <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Unten-d1e109"/>
+                     </rdf:alt>
+                  </tr3:answers>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Links-d1e62">
+                  <tr3:in>Links</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e62"/>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Rechts-d1e72">
+                  <tr3:in>Rechts</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e72"/>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Oben-d1e91">
+                  <tr3:in>Oben</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e91"/>
+               </rdf:Description>
+               <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Unten-d1e109">
+                  <tr3:in>Unten</tr3:in>
+                  <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e109"/>
+               </rdf:Description>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e62">
+                     <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/panel-links.html"/>
+                     <tr3:class>app switch</tr3:class>
+                     <tr3:out>Welches Symbol?</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Gurt-d1e63"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Airbag-d1e66"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Keines-keines"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Gurt-d1e63">
+                     <tr3:in>Gurt</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e63"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Airbag-d1e66">
+                     <tr3:in>Airbag</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e66"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Keines-keines">
+                     <tr3:in>Keines</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#keines"/>
+                  </rdf:Description>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e63">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>Du hast den Sicherheitsgurt auf der Fahrerseite nicht angelegt</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e64"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e64">
+                        <tr3:in>OK</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e64"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e64">
+                           <tr3:out>Sicherheitsgurt anlegen</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-behoben"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-behoben">
+                           <tr3:in>OK</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#behoben"/>
+                        </rdf:Description>
+                     </rdf:RDF>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e66">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>Die Rückhaltesysteme sind gestört.</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Werkstatt suchen-werkstatt"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Werkstatt suchen-werkstatt">
+                        <tr3:in>Werkstatt suchen</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#werkstatt"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#werkstatt">
+                           <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/geo.html"/>
+                           <tr3:class>app</tr3:class>
+                           <tr3:out>Werkstätten in deiner Nähe</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                     </rdf:RDF>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#keines">
+                        <tr3:out>Ist das Symbol in einem anderem Segment?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-display"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-auffaelligkeiten"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-display">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#display"/>
+                     </rdf:Description>
+                  </rdf:RDF>
+               </rdf:RDF>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e72">
+                     <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/panel-rechts.html"/>
+                     <tr3:class>app switch</tr3:class>
+                     <tr3:out>Welches Symbol?</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#ABS-d1e73"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Feststellbremse-d1e75"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#ECO-d1e88"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Keines-keines"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#ABS-d1e73">
+                     <tr3:in>ABS</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e73"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Feststellbremse-d1e75">
+                     <tr3:in>Feststellbremse</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e75"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#ECO-d1e88">
+                     <tr3:in>ECO</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e88"/>
+                  </rdf:Description>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e73">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>ABS ist gestört. Nicht weiterfahren!</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen">
+                        <tr3:in>OK</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#abstellen"/>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e75">
+                        <tr3:out>Ist Deine Feststellbremse (Handbremse) angezogen?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e76"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e82"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e76">
+                        <tr3:in>Nein</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e76"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e82">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e82"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e76">
+                           <tr3:class>bad</tr3:class>
+                           <tr3:out>Bremssytem ist gestört. Nicht weiterfahren!</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen">
+                           <tr3:in>OK</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#abstellen"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#abstellen">
+                              <tr3:out>Warnweste anziehen</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e78"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e78">
+                              <tr3:in>OK</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e78"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e78">
+                                 <tr3:out>Warndreieck aufbauen und vor Körper halten</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e79"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e79">
+                                 <tr3:in>OK</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e79"/>
+                              </rdf:Description>
+                              <rdf:RDF>
+                                 <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e79">
+                                    <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/dist.html"/>
+                                    <tr3:class>app</tr3:class>
+                                    <tr3:out>200m entgegen der Fahrtrichtung laufen</tr3:out>
+                                    <tr3:answers>
+                                       <rdf:alt>
+                                          <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e80"/>
+                                       </rdf:alt>
+                                    </tr3:answers>
+                                 </rdf:Description>
+                                 <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e80">
+                                    <tr3:in>OK</tr3:in>
+                                    <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e80"/>
+                                 </rdf:Description>
+                                 <rdf:RDF>
+                                    <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e80">
+                                       <tr3:out>Warndreieck aufstellen und zurück laufen</tr3:out>
+                                       <tr3:answers>
+                                          <rdf:alt>
+                                             <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-pannendienst"/>
+                                          </rdf:alt>
+                                       </tr3:answers>
+                                    </rdf:Description>
+                                    <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-pannendienst">
+                                       <tr3:in>OK</tr3:in>
+                                       <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#pannendienst"/>
+                                    </rdf:Description>
+                                 </rdf:RDF>
+                              </rdf:RDF>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e82">
+                           <tr3:out>Löse Die Feststellbremse</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-behoben"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-behoben">
+                           <tr3:in>OK</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#behoben"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#behoben">
+                              <tr3:out>Ist dein Problem damit behoben?</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e84"/>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-weiterfahrt"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e84">
+                              <tr3:in>Nein</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e84"/>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-weiterfahrt">
+                              <tr3:in>Ja</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#weiterfahrt"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e84">
+                                 <tr3:out>Weitersuchen?</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-polizei-oder-adac"/>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-auffaelligkeiten"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                              <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-auffaelligkeiten">
+                                 <tr3:in>Ja</tr3:in>
+                                 <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#auffaelligkeiten"/>
+                              </rdf:Description>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e88">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>Die Stopp-Start-Funktion ist gestört und wird ausgeschaltet</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Werkstatt suchen-werkstatt"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                  </rdf:RDF>
+               </rdf:RDF>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e91">
+                     <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/panel-oben.html"/>
+                     <tr3:class>app switch</tr3:class>
+                     <tr3:out>Welches Symbol?</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#ESP-d1e92"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Blinker links-d1e100"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Blinker rechts-d1e104"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Keines-keines"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#ESP-d1e92">
+                     <tr3:in>ESP</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e92"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Blinker links-d1e100">
+                     <tr3:in>Blinker links</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e100"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Blinker rechts-d1e104">
+                     <tr3:in>Blinker rechts</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e104"/>
+                  </rdf:Description>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e92">
+                        <tr3:out>Leuchtet die Leuchte dauerhaft?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e93"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e98"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e93">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e93"/>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e98">
+                        <tr3:in>Nein</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e98"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e93">
+                           <tr3:class>bad</tr3:class>
+                           <tr3:out>esp® ist aufgrund einer Störung abgeschaltet</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e94"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                        <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-d1e94">
+                           <tr3:in>OK</tr3:in>
+                           <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e94"/>
+                        </rdf:Description>
+                        <rdf:RDF>
+                           <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e94">
+                              <tr3:out>Starten deinen smart neu. Ist das ESP-Symbol erloschen?</tr3:out>
+                              <tr3:answers>
+                                 <rdf:alt>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e95"/>
+                                    <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-behoben"/>
+                                 </rdf:alt>
+                              </tr3:answers>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-d1e95">
+                              <tr3:in>Nein</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e95"/>
+                           </rdf:Description>
+                           <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-behoben">
+                              <tr3:in>Ja</tr3:in>
+                              <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#behoben"/>
+                           </rdf:Description>
+                           <rdf:RDF>
+                              <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e95">
+                                 <tr3:out>Vorsichtig weiterfahren!</tr3:out>
+                                 <tr3:answers>
+                                    <rdf:alt>
+                                       <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Werkstatt suchen-werkstatt"/>
+                                    </rdf:alt>
+                                 </tr3:answers>
+                              </rdf:Description>
+                           </rdf:RDF>
+                        </rdf:RDF>
+                     </rdf:RDF>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e98">
+                           <tr3:class>good</tr3:class>
+                           <tr3:out>esp® greift ein, weil Schleudergefahr besteht</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                     </rdf:RDF>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e100">
+                        <tr3:out>Blinkt die linke Blinkleuchte schneller als sonst?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e101"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-auffaelligkeiten"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e101">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e101"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e101">
+                           <tr3:class>bad</tr3:class>
+                           <tr3:out>Deine linke Blinkleuchte ist defekt</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-behoben"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                     </rdf:RDF>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e104">
+                        <tr3:out>Blinkt die rechte Blinkleuchte schneller als sonst?</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e105"/>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Nein-auffaelligkeiten"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ja-d1e105">
+                        <tr3:in>Ja</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e105"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e105">
+                           <tr3:class>bad</tr3:class>
+                           <tr3:out>Deine rechte Blinkleuchte ist defekt</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-behoben"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                     </rdf:RDF>
+                  </rdf:RDF>
+               </rdf:RDF>
+               <rdf:RDF>
+                  <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e109">
+                     <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/panel-unten.html"/>
+                     <tr3:class>app switch</tr3:class>
+                     <tr3:out>Welches Symbol?</tr3:out>
+                     <tr3:answers>
+                        <rdf:alt>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Batterie-d1e110"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ölstand-d1e112"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Motor-d1e114"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Tankreserve-d1e116"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Schaltsystem-d1e119"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Wegfahrsperre-d1e121"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Kühlmittel-d1e123"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Getriebe-d1e125"/>
+                           <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Keines-keines"/>
+                        </rdf:alt>
+                     </tr3:answers>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Batterie-d1e110">
+                     <tr3:in>Batterie</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e110"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Ölstand-d1e112">
+                     <tr3:in>Ölstand</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e112"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Motor-d1e114">
+                     <tr3:in>Motor</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e114"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Tankreserve-d1e116">
+                     <tr3:in>Tankreserve</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e116"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Schaltsystem-d1e119">
+                     <tr3:in>Schaltsystem</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e119"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Wegfahrsperre-d1e121">
+                     <tr3:in>Wegfahrsperre</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e121"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Kühlmittel-d1e123">
+                     <tr3:in>Kühlmittel</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e123"/>
+                  </rdf:Description>
+                  <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Getriebe-d1e125">
+                     <tr3:in>Getriebe</tr3:in>
+                     <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e125"/>
+                  </rdf:Description>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e110">
+                        <tr3:out>Die Batterie wird nicht geladen. Nicht weiterfahren!</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e112">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>Der Ölstand ist zu niedrig. Nicht weiterfahren!</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-abstellen"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e114">
+                        <tr3:class>critical</tr3:class>
+                        <tr3:out>Es kann eine Störung vorliegen.</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Werkstatt suchen-werkstatt"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e116">
+                        <tr3:class>critical</tr3:class>
+                        <tr3:out>Du fährst mit Reserve-Kraftstoff</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Tankstelle suchen-tankstelle"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#Tankstelle suchen-tankstelle">
+                        <tr3:in>Tankstelle suchen</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#tankstelle"/>
+                     </rdf:Description>
+                     <rdf:RDF>
+                        <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#tankstelle">
+                           <tr3:content rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/content/gasstation.html"/>
+                           <tr3:class>app</tr3:class>
+                           <tr3:out>Tankstellen in deiner Nähe</tr3:out>
+                           <tr3:answers>
+                              <rdf:alt>
+                                 <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-weiterfahrt"/>
+                              </rdf:alt>
+                           </tr3:answers>
+                        </rdf:Description>
+                     </rdf:RDF>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e119">
+                        <tr3:class>critical</tr3:class>
+                        <tr3:out>Das Schaltsystem ist gestört</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-werkstatt"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-werkstatt">
+                        <tr3:in>OK</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#werkstatt"/>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e121">
+                        <tr3:out>Die Wegfahrsperre ist gestört</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-werkstatt"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-werkstatt">
+                        <tr3:in>OK</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#werkstatt"/>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e123">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>Das Kühlmittel ist zu heiß. Nicht weiterfahren!</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-pannendienst"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-pannendienst">
+                        <tr3:in>OK</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#pannendienst"/>
+                     </rdf:Description>
+                  </rdf:RDF>
+                  <rdf:RDF>
+                     <rdf:Description rdf:about="http://www.hs-karlsruhe.de/kmm-m/tr3/node#d1e125">
+                        <tr3:class>bad</tr3:class>
+                        <tr3:out>Es liegt ein Getriebefehler vor</tr3:out>
+                        <tr3:answers>
+                           <rdf:alt>
+                              <rdf:li rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-werkstatt"/>
+                           </rdf:alt>
+                        </tr3:answers>
+                     </rdf:Description>
+                     <rdf:Description about="http://www.hs-karlsruhe.de/kmm-m/tr3/connection#OK-werkstatt">
+                        <tr3:in>OK</tr3:in>
+                        <tr3:target rdf:resource="http://www.hs-karlsruhe.de/kmm-m/tr3/node#werkstatt"/>
+                     </rdf:Description>
+                  </rdf:RDF>
+               </rdf:RDF>
+            </rdf:RDF>
+         </rdf:RDF>
+      </rdf:RDF>
+   </rdf:RDF>
+</rdf:RDF>

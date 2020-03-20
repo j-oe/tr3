@@ -1,0 +1,64 @@
+<!-- ==============================================================================
+
+     Title:   tr3 - decision tree format
+     Author:  Jan Oevermann, Hochschule Karlsruhe 
+     
+     FPI:     -//tr3//tr3 Base Format 1.0//DE
+     
+============================================================================== -->
+
+
+<!-- tr3 elements -->
+<!ENTITY % tr3.elements "(branch | leaf | ref)*" >
+
+<!-- namespace fix -->
+<!ENTITY % tr3.ns "xmlns CDATA #FIXED 'http://www.hs-karlsruhe.de/kmm-m/tr3'">
+
+<!-- tr3 attributes -->
+<!ENTITY % tr3.att.out "out CDATA #REQUIRED" >
+<!ENTITY % tr3.att.in.req "in CDATA #REQUIRED" >
+
+<!ENTITY % tr3.att.title "title CDATA #REQUIRED" >
+
+<!ENTITY % tr3.att.in "in CDATA #IMPLIED" >
+<!ENTITY % tr3.att.id "id ID #IMPLIED" >
+
+<!ENTITY % tr3.att.link "link CDATA #IMPLIED" >
+<!ENTITY % tr3.att.copy "copy CDATA #IMPLIED" >
+
+<!ENTITY % tr3.att.content "content CDATA #IMPLIED" >
+<!ENTITY % tr3.att.class "class CDATA #IMPLIED" >
+<!ENTITY % tr3.att.origin "origin CDATA #IMPLIED" >
+
+<!ELEMENT tr3 %tr3.elements;>
+<!ATTLIST tr3 
+    %tr3.ns;
+	%tr3.att.title;
+	%tr3.att.out;
+	%tr3.att.id;
+	%tr3.att.content;
+	%tr3.att.class;>
+
+<!ELEMENT branch %tr3.elements;>
+<!ATTLIST branch 
+	%tr3.att.out;
+	%tr3.att.id;
+	%tr3.att.in.req;
+	%tr3.att.content;
+	%tr3.att.class;
+	%tr3.att.origin;>
+
+<!ELEMENT leaf EMPTY>
+<!ATTLIST leaf 
+	%tr3.att.out;
+	%tr3.att.id;
+	%tr3.att.in.req;
+	%tr3.att.content;
+	%tr3.att.class;
+	%tr3.att.origin;>
+
+<!ELEMENT ref EMPTY>
+<!ATTLIST ref 
+	%tr3.att.in.req;
+	%tr3.att.link;
+	%tr3.att.copy;>

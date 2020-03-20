@@ -1,0 +1,179 @@
+/*
+	tr3 custom styling
+*/
+
+/*
+////////////////
+// DIAGNOSES ///
+////////////////
+*/
+
+/* GOOD */
+.tr3.good {
+	background: #1C723B;
+}
+
+.tr3.good .tr3-question{
+	color: #fff;
+}
+
+.tr3.good .tr3-question:before {
+	margin-bottom: 30px;
+	content: '\f122';
+	display: block;
+	font-family: "Ionicons";
+	font-size: 300%;
+	color: #fff;
+}
+
+/* GOOD */
+.tr3.critical {
+	background: linear-gradient(to bottom, #FFFEEB 0%, #f0b840 100%);
+}
+
+.tr3.critical .tr3-question {
+	color: #444;
+}
+
+.tr3.critical .tr3-question:before {
+	color: #444;
+	margin-bottom: 30px;
+	content: '\f100';
+	display: block;
+	font-family: "Ionicons";
+	font-size: 400%;
+}
+
+/* BAD */
+.tr3.bad {
+	background: #E8420C;
+}
+
+.tr3.bad .tr3-question:before {
+	margin-bottom: 30px;
+	content: '\f100';
+	display: block;
+	font-family: "Ionicons";
+	font-size: 300%;
+}
+
+.tr3.bad .tr3-answer {
+	color: #E8420C;
+	border: none;
+	border-radius: 5px;
+	background: #fff;
+}
+
+/* BUBU */
+.tr3.bubu {
+	background: #87CEEB;
+}
+
+.tr3.bubu .tr3-question:before {
+	color: #1E90FF;
+	margin-bottom: 30px;
+	content: '\f11d';
+	display: block;
+	font-family: "Ionicons";
+	font-size: 500%;
+}
+
+.tr3.bubu .tr3-answer {
+	background: #1E90FF;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+
+ /*
+ ///////////////
+ // MODULES ////
+ ///////////////
+ */
+
+ /* APP */
+
+.tr3.app .tr3-content-toggle{
+	display: none !important;
+}
+
+.tr3.app .tr3-content {
+	display: block !important;
+	padding: 10px 0px;
+	width: 80%;
+	margin: auto;
+	margin-top: 4%;
+	position: relative;
+	top: 25px;
+}
+
+.tr3.app.switch .tr3-content {
+	background: #eee !important;
+	border: none !important;
+	padding: 0;
+}
+
+.tr3.app .tr3-choices {
+	margin-top: 25px;
+}
+
+/* SWITCH */
+
+.tr3.switch .tr3-choices{
+	display: none;
+}
+
+/*
+ ///////////////
+ // CUSTOM /////
+ ///////////////
+ */
+
+
+.userDistance {
+	padding: 50px !important;
+	width: 400px !important;
+	margin-bottom: 20px !important;
+}
+
+.symPanel {
+	position: relative !important;
+	margin: auto !important;
+	width: 500px !important;
+}
+
+.smart-cockpit-panel {
+	cursor: pointer !important;
+}
+
+.symImage {
+	left: 0 !important;
+}
+
+.symTable {
+	left: 0 !important;
+	width: 400px !important;
+}
+
+.symTable td {
+	cursor: pointer;
+}
+
+.userPicture {
+	padding: 20px 0 50px 100px !important;
+	text-align: left !important;
+}
+
+.userCall {
+	padding: 20px 0 50px 100px !important;
+	text-align: left !important;
+	width: 500px !important;
+}
+
+.callLinkIcon {
+	margin-left: 0;
+}
+
+.callLink {
+	margin-top: 2%; 
+}

@@ -1,0 +1,82 @@
+<div id="google_canvas" style="width:100%; height:250px; background-color: rgb(229, 227, 223); border-radius:5px; -webkit-transform: translateZ(0);"></div>
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDuWxnNe-C6yWJfrAwpNdtY5keFUh3MhLE&sensor=true&callback=initGoogleMap"></script>
+<script type="text/javascript">
+window.initGoogleMap =	function() {
+
+	    if(!!navigator.geolocation) {
+
+	    	function callback(results, status) {
+				if (status == google.maps.places.PlacesServiceStatus.OK) {
+				    for (var i = 0; i < results.length; i++) {
+				    	var place = results[i];
+				    	createMarker(results[i]);
+				    }
+				  }
+				}
+
+			function createMarker(place) {
+				var placeLoc = place.geometry.location;
+				var marker = new google.maps.Marker({
+				    map: map,
+				    position: place.geometry.location
+				});
+
+				var infowindow = new google.maps.InfoWindow({
+	                map: map,
+	                position: place.geometry.location,
+	                content: place.name
+	            });
+			}
+	    
+	        $('.tr3-question').append('&nbsp;<i class="icon ion-ios7-refresh-empty ion-spin tr3-googlemaploading"></i>');
+
+	        var map;    
+	        var mapOptions = {
+	            zoom: 14,	
+	        };
+	        
+	        map = new google.maps.Map(document.getElementById('google_canvas'), mapOptions);
+	    
+	        navigator.geolocation.getCurrentPosition(function(position) {
+	            var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+	            console.log(geolocate);
+	            
+	            var infowindow = new google.maps.InfoWindow({
+	                map: map,
+	                position: geolocate,
+	                content: '<img src="img/logo.svg" width="25px" />'
+	            });
+	            
+	            var marker = new google.maps.Marker({
+				    position: geolocate,
+				    map: map,
+				    title: 'Ihr smart'
+				});
+	            
+	            var request = {
+				    location: geolocate,
+				    radius: '1000',
+				    types: ['parking']
+				};
+
+				service = new google.maps.places.PlacesService(map);
+				service.nearbySearch(request, callback); 
+	            
+	            map.setCenter(geolocate);
+	        });
+
+	        google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+	        	google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+				    $('.tr3-googlemaploading').remove();
+				    $(".gm-style-iw").each( function(){
+				    	$(this).next("div").hide();
+				    });
+				});
+			});
+
+	    } else {
+	        document.getElementById('google_canvas').innerHTML = 'No Geolocation Support.';
+	    }
+	}
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>smart help</title>
+
+    <!-- Web app characterization -->
+    <meta name="description" content="smart help - guided breakdown help">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link  rel="apple-touch-icon" href="img/logo.png">
+
+    <!-- Styling framework -->
+    <link rel="stylesheet" href="css/lib/ionic.css">
+
+    <!-- Custom MB-Icon framework -->
+    <link rel="stylesheet" href="css/lib/mbsymbols.css">
+
+    <!-- Custom app style -->
+    <link rel="stylesheet" href="css/smarthelp.css">
+    <link rel="stylesheet" href="css/tr3.base.css">
+    <link rel="stylesheet" href="css/tr3.custom.css">
+  </head>
+
+  <body class="sh">
+    <div class="sh-loading" style="width: 100%; height: 100%; background: #222;">
+      <div class="sh-loading-splash">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="180px" height="180px" viewBox="0 0 566.929 566.929" enable-background="new 0 0 566.929 566.929"><g><path fill="#FBB820" d="M400.456,65.399c57.658,37.348,140.697,153.886,163.004,218.225 c-22.307,64.535-105.346,180.774-163.004,218.208V65.399z"/></g><g><path fill="#9F9F9F" d="M277.1,148.16c30.11,0,68.569,11.96,98.736,33.531V50.352c-30.028-18.699-66.646-29.666-109.506-29.666 c-145.349,0-262.86,117.737-262.86,262.938c0,145.373,117.512,262.619,262.86,262.619c42.86,0,79.479-10.544,109.506-29.347 V385.222c-30.167,21.561-68.626,33.88-98.736,33.88c-81.783,0-141.895-59.729-141.895-135.478 C135.206,207.543,195.317,148.16,277.1,148.16z"/></g></svg>
+      </div>
+    </div>
+
+    <div class="sh-container">
+      <div class="sh-panel">
+        <div class="sh-panel-content">
+          <div class="sh-header">
+            <img src="img/logo-mono.svg" class="sh-logo"/>
+            <span>smart help</span>
+          </div>
+          <div class="sh-links">
+            <div class="sh-links-header">Quicklinks</div>
+            <ul class="sh-links-list"></ul>
+          </div>
+          <div class="sh-tab-bar">
+            <a class="tab-item"><i class="icon ion-home sh-home"></i></a>
+            <a class="tab-item"><i class="icon ion-arrow-left-a tr3-back"></i></a>
+            <a class="tab-item"><i class="icon ion-gear-a sh-settings"></i></a>
+          </div>
+        </div>
+      </div>
+      <img src="img/drag.svg" class="sh-drag" />
+    </div>
+
+    <!-- app canvas: filled by decision tree logic -->
+    <div class="tr3"></div>
+
+    <!-- Libraries -->
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/hammer.js"></script>
+
+    <!-- tr3: decision tree logic -->
+    <script src="js/tr3.js"></script>
+
+    <!-- App UI -->
+    <script src="js/smarthelp.js"></script>
+  </body>
+</html>

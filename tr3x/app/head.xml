@@ -1,0 +1,20 @@
+<head xmlns="http://www.w3.org/1999/xhtml">
+    <meta charset="utf-8" />
+    <meta name="description" content="tr3x - tree explorer" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- <link  rel="apple-touch-icon" href="img/logo.png" /> -->
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="/gui/css/app.css" />
+    <link rel="stylesheet" href="/gui/css/svg.css" />
+    <!-- scripting -->
+    <script src="script/lib/d3.js" />
+    <script src="script/lib/jquery.js" />  <!-- only needed, if external content has depencies. not essential for application-->
+    <script src="script/tr3x.js" />
+
+    <!-- title -->
+    <title>
+      laden...
+    </title>
+  </head>

@@ -1,0 +1,88 @@
+<div class="symPanel">
+	<table class="symTable">
+		<tbody>
+			<tr>
+				<td data-link="ABS"><i class="mb-icon mb-abs"></i></td>
+				<td data-link="Feststellbremse"><i class="mb-icon mb-brake"></i></td>
+			</tr>
+			<tr>
+				<td data-link="ECO"><i class="mb-icon mb-eco"></i></td>				
+				<td data-link="Keines" class="no-icon" colspan="2"><strong>keines<br/>davon</strong></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	// if user clicks on symbol redirect this event to hidden answer button
+	$('td').on(tr3.trigger, function() {
+    	_link = $(this).attr('data-link');
+    	
+    	$('.tr3-answer').each(function() {
+    		_in = $(this).text();
+    		if (_in == _link){
+    			$(this).trigger(tr3.trigger);
+    		}
+    	})
+    });
+	// make symbol glow when user taps on it
+	$('td i').on('touchstart',function(){
+    	$(this).css('color', '#E8420C').addClass('symGlow')
+    });
+	// adjust height of tr3-content container
+	$('.tr3-content').css('height', $('.symTable').height() + 20);
+</script>
+<style type="text/css">
+.tr3-content {
+	position: absolute;
+	background: #FBB820;
+	border: 5px solid #FBB820;
+	margin-top: 3%;
+}
+
+.mb-icon {
+	font-size: 400%;
+}
+
+.tr3-choices {
+	opacity: 0;
+}
+
+.symPanel {
+	position: relative;
+	min-height: 100%;
+}
+
+.symTable {
+	border: none;
+	width: 300px;
+	position: relative;
+	left: -5%;
+	margin: auto;
+}
+
+.symTable tr {
+	height: 70pt;
+}
+
+.symTable td {
+	font-size: 12pt;
+	vertical-align: middle;
+	text-align: center;
+	color: #333;
+}
+
+.symTable td.no-icon {
+	font-size: 16pt;
+	line-height: 1;
+}
+
+.symGlow {
+    -webkit-animation: glow .7s alternate infinite;
+}
+
+@-webkit-keyframes glow {
+    to {
+        text-shadow: 0 0 15px #E8420C;
+    }
+}
+</style>

@@ -1,0 +1,96 @@
+<div class="userPicture">
+	<div style="height: 0px;width:0px; overflow:hidden;">
+		<input type="file" id="upfile" class="getUserPictureInput" accept="image/*;capture=camera">
+	</div>
+	<i class="icon ion-camera getUserPicture"></i>
+	<span class="getUserPictureText">Foto aufnehmen</span>
+</div>
+<div id="thumbnails"></div>
+<script type="text/javascript">
+
+	function getFile(){
+        $("#upfile").trigger('click');
+    }
+
+    $('.getUserPicture, .getUserPictureText').on(tr3.trigger,function() {
+    	getFile();
+    });
+
+    $('#upfile').on('change',function() {
+    	$('.getUserPicture').removeClass('ion-camera');
+    	$('.getUserPicture').addClass('ion-ios7-refresh-empty ion-spin');
+    	$('.getUserPicture').css('font-size', '400%');
+    	handleFiles();
+    });
+
+    function handleFiles() {
+    	var input = document.getElementById("upfile"),
+    		files = input.files;
+	    for (var i = 0; i < files.length; i++) {
+		    var file = files[i],
+		    	imageType = /image.*/;
+
+		    if (!file.type.match(imageType)) {
+		      continue;
+		    }
+
+		    var img = document.createElement("img");
+		    img.classList.add("obj");
+		    img.file = file;
+
+		    preview = document.getElementById("thumbnails");
+		    preview.appendChild(img);
+
+		    var reader = new FileReader();
+		    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+		    reader.readAsDataURL(file);
+		    reader.onloadend = function() {
+		    	$('.getUserPicture').removeClass('ion-ios7-refresh-empty ion-spin');
+		    	$('.getUserPicture').addClass('ion-camera');
+		    	$('.getUserPicture').css('font-size', '450%');
+		    };
+
+		}
+	}
+
+
+
+</script>
+<style type="text/css">
+
+#thumbnails {
+	margin: auto;
+	position: relative;
+	margin-top: -5%;
+	width: 75%;
+	text-align: center;
+}
+
+#thumbnails img{
+	border: 2px solid #222;
+	border-radius: 5px;
+	margin-right: 2%;
+	max-width: 30%;
+	max-height: 20%;
+}
+
+.userPicture {
+	padding: 20px;
+}
+.getUserPicture {
+	margin-left: 5%;
+	font-size: 450%;
+	cursor: pointer;
+	color: #222;
+}
+
+.getUserPictureText {
+	color: #222;
+	cursor: pointer;
+	font-size: 140%;
+	font-weight: 700;
+	margin-top: 7%;
+	position: absolute;
+	margin-left: 5%;
+}
+</style>

@@ -1,0 +1,133 @@
+<div class="userDistance">
+	<i class="icon ion-pinpoint userDistanceLoading"></i>
+	<span id="userDistanceValue">~</span>
+	m
+</div>
+
+<script type="text/javascript">
+
+$('.userDistanceLoading').addClass('ion-spin');
+
+var wait;
+var blink;
+var startPos = 0;
+
+var audio = new Audio("content/sounds/notify.mp3");
+
+Number.prototype.toRad = function() {
+	return this * Math.PI / 180;
+}
+
+function roundToNextHalf(value) {
+	return Math.round(value * 2) / 2;
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+	var R = 6371;
+	var dLat = (lat2-lat1).toRad();
+	var dLon = (lon2-lon1).toRad();
+	var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * Math.sin(dLon/2) * Math.sin(dLon/2);
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+	var d = (R * c) * 1000; // * 1000 = in Metern
+	//console.log(d);
+	var result = roundToNextHalf(d); // 0.5 Schritte
+	return result;
+}
+
+function checkDistance(distance) {
+	if (distance >= 200) {
+		blink = window.setInterval(function () { $('.tr3-content').toggleClass('green'); }, 500)
+		// $('.tr3-content').toggleClass('green');
+
+		$('.userDistanceLoading').removeClass('ion-spin');
+		$('.userDistanceLoading').removeClass('ion-pinpoint');
+		$('.userDistanceLoading').addClass('ion-checkmark');
+
+		audio.play();
+	} else {
+		$('.tr3-content').removeClass('green');
+
+		// gradually change color (removed)
+		/*
+		r = Math.round(distance * 0.14);
+		g = Math.round(distance * 0.57);
+		b = Math.round(distance * 0.29);
+		$('.tr3-content').css('background', 'rgb(' + r + ',' + g + ',' + b + ')');
+		*/
+	}
+}
+
+function fakeDistanceChange(value) {
+	if (value < 201) {
+		if (wait) {
+			window.clearTimeout(wait);
+		}
+		checkDistance(value);
+		document.getElementById('userDistanceValue').innerHTML = value;
+
+		// Math vodoo for gradual slow down
+		ground = value / 25;
+		delay = Math.pow(2, ground);
+		next = value + 1.5;
+		wait = window.setTimeout(function() { fakeDistanceChange(next); }, delay);
+	}
+}
+
+if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition(function(position) {
+	  		//console.log(position);
+	  		startPos = position;
+	    }, function(error) {
+	    	alert("Position kann nicht ermittelt werden");
+    });
+
+    navigator.geolocation.watchPosition(function(position) {
+    	$('.userDistanceLoading').removeClass('ion-spin');
+
+    	distance = calculateDistance(startPos.coords.latitude, startPos.coords.longitude, position.coords.latitude, position.coords.longitude);
+
+    	$("#userDistanceValue").html(distance);
+        checkDistance(distance);
+    });
+}
+
+// bind fake to icon
+$('.userDistanceLoading').on(tr3.trigger, function() {
+	fakeDistanceChange(1);
+});
+
+
+//cleanup
+if (blink) {
+	window.clearInterval(blink);
+	$('.tr3-content').removeClass('green');
+}
+if (wait) {
+	window.clearTimeout(wait);
+}
+
+$('.tr3-answer').on(tr3.trigger, function (){
+	window.clearInterval(blink);
+});
+
+</script>
+
+<style type="text/css">
+.userDistance {
+	padding: 75px 0;
+	color: #222;
+	font-size: 350%;
+	font-weight: 700;
+	width: 300px;
+	margin: auto;
+}
+
+.green {
+	border-color: #1C723B;
+	background: #1C723B;
+}
+
+.green .userDistance {
+	color: #fff;
+}
+</style>

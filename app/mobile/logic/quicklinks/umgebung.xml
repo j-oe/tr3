@@ -1,0 +1,6 @@
+<tr3 title="Umgebungssuche" out="Was suchst du?">
+	<leaf in="Werkstatt" out="Werkstätten in der Nähe" content="content/geo.html" class="app" />
+	<leaf in="Tankstelle" out="Tankstellen in der Nähe" content="content/gasstation.html" class="app" />
+	<leaf in="Parkflächen" out="Parkflächen in der Nähe" content="content/parking.html" class="app" />
+	<leaf in="Krankenhaus" out="Krankenhäuser in der Nähe" content="content/hospital.html" class="app" />
+</tr3>

@@ -1,0 +1,52 @@
+<div class="app-panel" xmlns="http://www.w3.org/1999/xhtml">
+  <p class="app-heading">
+    laden... <!-- will be replaced by tr3x.js when finished loading -->
+  </p>
+  <p class="app-report"></p>
+  <p class="app-stats"></p>
+  
+  <p class="app-sub">
+    Informationen
+  </p>
+  <div class="app-data">
+    <i>Klicken Sie auf einen Knoten</i>
+  </div>
+  
+  <p class="app-sub">Navigation</p>
+  <div class="app-control">
+    <form>
+      <table>
+        <tr>
+          <td>Modus:</td>
+          <td>
+            <input type="radio" name="mode" value="info" checked="checked" id="r_i"></input>
+            <label for="r_i">Info</label>
+            <input type="radio" name="mode" value="collapse" id="r_c"></input>
+            <label for="r_c">Toggle</label> 
+          </td>
+        </tr>
+        <tr>
+          <td>Zoom:</td>
+          <td>
+            <input id="app-zoom" type="range" min="10" max="50" step="10" />
+          </td>
+        </tr>
+        <tr>
+          <td>Links:</td>
+          <td>
+            <input type="checkbox" id="app-links" checked="checked"></input>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  
+  <p class="app-sub">Suche</p>
+  <div class="app-search">
+    <input type="text" id="app-search" placeholder="Suche..." tabindex='100'></input>
+    <div></div>
+  </div>
+  
+  <p class="app-sub">Vorschau</p>
+  <div class="app-preview"><i>kein Content verknüpft</i></div>
+</div>

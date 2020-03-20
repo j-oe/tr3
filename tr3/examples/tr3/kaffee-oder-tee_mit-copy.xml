@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tr3 out="Kaffee oder Tee?" title="Persönlichkeit" xmlns="http://www.hs-karlsruhe.de/kmm-m/tr3">
+   <branch in="Kaffee" out="Zucker?" id="a123">
+      <leaf in="Ja" out="Typ 2"/>
+      <leaf in="Nein" out="Typ 3"/>
+   </branch>
+   <ref in="Tee" copy="a123"/>
+</tr3>

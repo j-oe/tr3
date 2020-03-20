@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ==============================================================================
+  
+       Title:     tr3 - decision tree format
+       Author:    Jan Oevermann, Hochschule Karlsruhe 
+  
+       Namespace: http://www.hs-karlsruhe.de/kmm-m/tr3
+  
+  ==============================================================================
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  targetNamespace="http://www.hs-karlsruhe.de/kmm-m/tr3"
+  xmlns:tr3="http://www.hs-karlsruhe.de/kmm-m/tr3">
+  <xs:element name="tr3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tr3:branch"/>
+        <xs:element ref="tr3:leaf"/>
+        <xs:element ref="tr3:ref"/>
+      </xs:choice>
+      <xs:attribute name="content" type="xs:string"/>
+      <xs:attribute name="out" use="required" type="xs:normalizedString"/>
+      <xs:attribute name="title" use="required" type="xs:normalizedString"/>
+      <xs:attribute name="class" type="xs:NMTOKENS"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="branch">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tr3:branch"/>
+        <xs:element ref="tr3:ref"/>
+        <xs:element ref="tr3:leaf"/>
+      </xs:choice>
+      <xs:attribute name="class" type="xs:NMTOKENS"/>
+      <xs:attribute name="content" type="xs:string"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="in" use="required" type="xs:normalizedString"/>
+      <xs:attribute name="out" use="required" type="xs:normalizedString"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="leaf">
+    <xs:complexType>
+      <xs:attribute name="content" type="xs:string"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="in" use="required" type="xs:normalizedString"/>
+      <xs:attribute name="out" use="required" type="xs:normalizedString"/>
+      <xs:attribute name="class" type="xs:NMTOKENS"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref">
+    <xs:complexType>
+      <xs:attribute name="copy" type="xs:IDREF"/>
+      <xs:attribute name="in" use="required" type="xs:normalizedString"/>
+      <xs:attribute name="link" type="xs:IDREF"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
